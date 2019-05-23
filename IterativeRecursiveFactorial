@@ -1,0 +1,31 @@
+public class IterativeRecursiveFactorial
+{
+public static void main(String[] args)
+{
+int n = 6;
+System.out.println(factorialIterative(n));
+System.out.println(factorialRecursive(n));
+}//end main
+
+public static long factorialIterative(int numPassed)
+{
+long product = 1;
+for(int i = 1; i <= numPassed; ++i)
+{
+product = product * i;
+}//end for loop
+return product;
+}//end method
+
+
+public static long factorialRecursive(int numPassed)
+{
+if(numPassed == 0)
+   return 1;
+   else
+      return numPassed * factorialRecursive(numPassed - 1);
+      
+
+}//end method
+
+}//end class
