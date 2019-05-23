@@ -1,0 +1,29 @@
+public class IterativeRecursiveGrains_CTIM16801_Fall2016
+{
+public static void main(String[] args)
+{
+int n = 4;
+System.out.println(iterativeGrains(n));
+System.out.println(recursiveGrains(n, 1));
+}//end main
+
+public static long recursiveGrains(int numOfSquares, long numGrainsWheat)
+{
+if(numOfSquares == 1)
+   return numGrainsWheat;
+   else
+      return numGrainsWheat +  recursiveGrains(numOfSquares -1, numGrainsWheat * 2);
+
+}//end method
+
+public static long iterativeGrains(int numPassed)
+{
+long grains = 0;
+for(int i = 0; i < numPassed; ++i)
+{
+grains = grains + (long)(Math.pow(2, i));
+}//end for loop
+return grains;
+}//end method
+
+}//end class
